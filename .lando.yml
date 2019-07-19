@@ -1,0 +1,5 @@
+name: drupal8project
+recipe: drupal8
+config:
+   webroot: web
+   via: nginx
