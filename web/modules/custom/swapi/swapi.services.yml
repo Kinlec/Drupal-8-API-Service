@@ -1,0 +1,7 @@
+services:
+  swapi.root_api:
+    class: Drupal\swapi\Services\SwapiRootAPI
+  swapi.reference_updater:
+    class: Drupal\swapi\Services\SwapiReferenceUpdater
+  swapi.create_node:
+    class: Drupal\swapi\Services\SwapiCreateNode

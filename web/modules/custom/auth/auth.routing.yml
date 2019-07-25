@@ -1,0 +1,7 @@
+auth.settings:
+  path: '/auth'
+  defaults:
+    _form: 'Drupal\auth\Form\AuthConfigForm'
+    _title: 'Contact Form'
+  requirements:
+    _permission: 'access content'

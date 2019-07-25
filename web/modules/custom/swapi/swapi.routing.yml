@@ -1,0 +1,7 @@
+example.my_page:
+  path: '/swapi'
+  defaults:
+    _form: '\Drupal\swapi\Form\SwapiForm'
+    _title: 'API Form'
+  requirements:
+    _permission: 'access content'

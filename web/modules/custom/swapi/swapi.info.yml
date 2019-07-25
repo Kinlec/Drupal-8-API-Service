@@ -1,0 +1,6 @@
+name: SWAPI
+description: 'Retrieve data from SWAPI'
+type: module
+core: 8.x
+version: 1.0
+package: Custom
