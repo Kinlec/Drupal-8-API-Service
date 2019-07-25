@@ -38,7 +38,7 @@ class PeopleWorker extends QueueWorkerBase {
         'field_birth_year' => $data['birth_year'],
         'field_gender' => $data['gender'],
         'field_created' => $data['created'],
-        'field_ed' => $data['edited'],
+        'field_edited' => $data['edited'],
         'field_url' => $data['url'],
       ];
       $service->createNode($data['name'], $fields, $changeable_fields, $data['edited']);

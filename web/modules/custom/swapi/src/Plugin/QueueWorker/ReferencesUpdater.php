@@ -26,7 +26,7 @@ class ReferencesUpdater extends QueueWorkerBase {
       case 'films':
         $array_fields = [
           'field_planets' => $data['planets'],
-          'field_characters' => $data['characters'],
+          'field_people' => $data['characters'],
           'field_species' => $data['species'],
           'field_vehicles' => $data['vehicles'],
           'field_starships' => $data['starships'],
@@ -50,7 +50,7 @@ class ReferencesUpdater extends QueueWorkerBase {
         break;
       case 'people':
         $array_fields = [
-          'field_homeworld' => $data['homeworld'],
+          'field_planets' => $data['homeworld'],
           'field_films' => $data['films'],
           'field_species' => $data['species'],
           'field_vehicles' => $data['vehicles'],
@@ -61,29 +61,29 @@ class ReferencesUpdater extends QueueWorkerBase {
       case 'planets':
         $array_fields = [
           'field_films' => $data['films'],
-          'field_characters' => $data['residents'],
+          'field_people' => $data['residents'],
         ];
         $service->updateReferences($array_fields, $data['name'], 'planets');
         break;
       case 'species':
         $array_fields = [
           'field_films' => $data['films'],
-          'field_characters' => $data['people'],
-          'field_homeworld' => $data['homeworld'],
+          'field_people' => $data['people'],
+          'field_planets' => $data['homeworld'],
         ];
         $service->updateReferences($array_fields, $data['name'], 'species');
         break;
       case 'vehicles':
         $array_fields = [
           'field_films' => $data['films'],
-          'field_characters' => $data['pilots'],
+          'field_planets' => $data['pilots'],
         ];
         $service->updateReferences($array_fields, $data['name'], 'vehicles');
         break;
       case 'starships':
         $array_fields = [
           'field_films' => $data['films'],
-          'field_characters' => $data['pilots'],
+          'field_planets' => $data['pilots'],
         ];
         $service->updateReferences($array_fields, $data['name'], 'starships');
         break;

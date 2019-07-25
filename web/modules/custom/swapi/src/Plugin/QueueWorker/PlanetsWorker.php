@@ -39,7 +39,7 @@ class PlanetsWorker extends QueueWorkerBase {
         'field_surface_water' => $data['surface_water'],
         'field_terrain' => $data['terrain'],
         'field_created' => $data['created'],
-        'field_ed' => $data['edited'],
+        'field_edited' => $data['edited'],
         'field_url' => $data['url'],
       ];
       $service->createNode($data['name'], $fields, $changeable_fields, $data['edited']);

@@ -4,6 +4,9 @@ namespace Drupal\swapi\Services;
 
 use Drupal;
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Exception\RequestException;
+
 
 class SwapiRootAPI {
 
@@ -16,8 +19,14 @@ class SwapiRootAPI {
     $something_else = [];
     $i = 1;
     do {
-
-      $request = $client->request('GET', $url . '?page=' . $i);
+      try {
+        $request = $client->request('GET', $url . '?page=' . $i);
+      } catch (RequestException $exception) {
+        echo Psr7\str($exception->getRequest());
+        if ($exception->hasResponse()) {
+          echo Psr7\str($exception->getResponse());
+        }
+      }
       $request = \GuzzleHttp\json_decode($request->getBody(), TRUE);
       $next = $request["next"];
 

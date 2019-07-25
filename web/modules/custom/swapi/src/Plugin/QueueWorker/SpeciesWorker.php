@@ -30,7 +30,7 @@ class SpeciesWorker extends QueueWorkerBase {
       ];
       $changeable_fields = [
         'field_name' => $data['name'],
-        'field_average_height' => $data['average_height'],
+        'field_height' => $data['average_height'],
         'field_average_lifespan' => $data['average_lifespan'],
         'field_classification' => $data['classification'],
         'field_designation' => $data['designation'],
@@ -39,7 +39,7 @@ class SpeciesWorker extends QueueWorkerBase {
         'field_language' => $data['language'],
         'field_skin_color' => $data['skin_colors'],
         'field_created' => $data['created'],
-        'field_ed' => $data['edited'],
+        'field_edited' => $data['edited'],
         'field_url' => $data['url'],
       ];
       $service->createNode($data['name'], $fields, $changeable_fields, $data['edited']);

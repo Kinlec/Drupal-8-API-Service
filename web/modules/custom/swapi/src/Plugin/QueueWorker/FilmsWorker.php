@@ -35,7 +35,7 @@ class FilmsWorker extends QueueWorkerBase {
         'field_opening_crawl' => $data['opening_crawl'],
         'field_release_date' => $data['release_date'],
         'field_created' => $data['created'],
-        'field_ed' => $data['edited'],
+        'field_edited' => $data['edited'],
         'field_url' => $data['url'],
       ];
       $result = Drupal::entityTypeManager()

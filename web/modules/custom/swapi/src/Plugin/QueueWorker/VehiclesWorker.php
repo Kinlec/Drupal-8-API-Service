@@ -32,7 +32,7 @@ class VehiclesWorker extends QueueWorkerBase {
         'field_name' => $data['name'],
         'field_cargo_capacity' => $data['cargo_capacity'],
         'field_consumables' => $data['consumables'],
-        'field_cost_i' => $data['cost_in_credits'],
+        'field_cost_in_credits' => $data['cost_in_credits'],
         'field_crew' => $data['crew'],
         'field_length' => $data['length'],
         'field_manufacturer' => $data['manufacturer'],
@@ -41,7 +41,7 @@ class VehiclesWorker extends QueueWorkerBase {
         'field_passengers' => $data['passengers'],
         'field_vehicle_class' => $data['vehicle_class'],
         'field_created' => $data['created'],
-        'field_ed' => $data['edited'],
+        'field_edited' => $data['edited'],
         'field_url' => $data['url'],
       ];
       $service->createNode($data['name'], $fields, $changeable_fields, $data['edited']);

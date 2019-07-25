@@ -32,7 +32,7 @@ class StarshipsWorker extends QueueWorkerBase {
         'field_name' => $data['name'],
         'field_cargo_capacity' => $data['cargo_capacity'],
         'field_consumables' => $data['consumables'],
-        'field_cost_i' => $data['cost_in_credits'],
+        'field_cost_in_credits' => $data['cost_in_credits'],
         'field_crew' => $data['crew'],
         'field_hyperdrive_rating' => $data['hyperdrive_rating'],
         'field_length' => $data['length'],
@@ -43,7 +43,7 @@ class StarshipsWorker extends QueueWorkerBase {
         'field_passengers' => $data['passengers'],
         'field_starship_class' => $data['starship_class'],
         'field_created' => $data['created'],
-        'field_ed' => $data['edited'],
+        'field_edited' => $data['edited'],
         'field_url' => $data['url'],
       ];
       $service->createNode($data['name'], $fields, $changeable_fields, $data['edited']);
